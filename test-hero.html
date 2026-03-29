@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DiGiKing — Hero Prototype</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <style>
+        /* ─── Reset ─── */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: 'Poppins', sans-serif;
+            color: #111;
+            overflow-x: hidden;
+        }
+
+        body {
+            background: #050505;
+            overflow-x: hidden;
+        }
+
+        /* ─── Preloader ─── */
+        .preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: #050505;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.6s ease;
+        }
+
+        .preloader-text {
+            font-family: 'Hammersmith One', sans-serif;
+            font-size: 2.5rem;
+            color: #fff;
+            letter-spacing: 0.3em;
+            display: flex;
+            gap: 2px;
+        }
+
+        .preloader-text .letter {
+            display: inline-block;
+            animation: pulse 1.4s ease-in-out infinite;
+        }
+
+        .preloader-text .letter:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .preloader-text .letter:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .preloader-text .letter:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .preloader-text .letter:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        .preloader-text .letter:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        .preloader-text .letter:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+
+        .preloader-text .letter:nth-child(7) {
+            animation-delay: 0.6s;
+        }
+
+        .preloader-text .dot {
+            animation: dotBlink 1.4s ease-in-out infinite;
+        }
+
+        .preloader-text .dot:nth-child(8) {
+            animation-delay: 0.7s;
+        }
+
+        .preloader-text .dot:nth-child(9) {
+            animation-delay: 0.9s;
+        }
+
+        .preloader-text .dot:nth-child(10) {
+            animation-delay: 1.1s;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: translateY(0);
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes dotBlink {
+
+            0%,
+            100% {
+                opacity: 0.2;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .preloader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* ─── Header / Nav ─── */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 16px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .logo {
+            font-family: 'Hammersmith One', sans-serif;
+            font-size: 1.8rem;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-left: 28px;
+            padding: 8px 16px;
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.5);
+            transition: background 0.3s;
+        }
+
+        header nav a:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        header .cta-btn {
+            display: inline-block;
+            padding: 10px 24px;
+            background: #e60000;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        header .cta-btn:hover {
+            background: #cc0000;
+        }
+
+        /* ─── Hero / Landing ─── */
+        .hero-wrapper {
+            position: relative;
+            height: 200vh;
+            /* extra scroll room for the zoom animation */
+        }
+
+        .hero {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f1f1f1;
+            overflow: hidden;
+            will-change: transform;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-subtitle {
+            font-family: 'Hammersmith One', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #222;
+            text-align: left;
+            margin-bottom: 0;
+        }
+
+        .hero-title {
+            font-family: 'Hammersmith One', sans-serif;
+            font-size: clamp(3rem, 10vw, 10rem);
+            text-transform: uppercase;
+            color: #e60000;
+            text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+            margin: 0;
+            line-height: 1;
+            will-change: transform;
+        }
+
+        .hero-title .n-letter {
+            display: inline-block;
+            color: #e60000;
+        }
+
+        .hero-tagline {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(240, 240, 240, 0.9);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px 10px 0 0;
+            z-index: 5;
+            will-change: transform;
+            transform: translateZ(0);
+        }
+
+        .hero-tagline p {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #111;
+            margin: 0;
+        }
+
+        /* Spline 3D background */
+        .hero spline-viewer {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            will-change: transform;
+            transform: translateZ(0);
+        }
+
+        /* ─── About Section ─── */
+        .about {
+            position: relative;
+            min-height: 100vh;
+            background: #050505;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 80px 40px;
+            z-index: 10;
+        }
+
+        .about-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-left {
+            font-family: 'Hammersmith One', sans-serif;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            color: #e60000;
+            line-height: 1.3;
+        }
+
+        .about-right {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .about-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 24px;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .about-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .about-card p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+        }
+
+        /* ─── Spacer (so scroll works properly) ─── */
+        .spacer {
+            height: 50vh;
+            background: #050505;
+        }
+
+        /* ─── Mobile ─── */
+        @media (max-width: 768px) {
+            header {
+                padding: 12px 20px;
+            }
+
+            header nav {
+                display: none;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+                text-align: center;
+            }
+
+            .about-inner {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 40px 20px;
+            }
+
+            .about-left {
+                text-align: center;
+            }
+
+            .hero spline-viewer {
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-text">
+            <span class="letter">L</span>
+            <span class="letter">O</span>
+            <span class="letter">A</span>
+            <span class="letter">D</span>
+            <span class="letter">I</span>
+            <span class="letter">N</span>
+            <span class="letter">G</span>
+            <span class="dot">.</span>
+            <span class="dot">.</span>
+            <span class="dot">.</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">DiGiKing</a>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#">Our Work</a>
+            <a href="#">Our Content</a>
+        </nav>
+        <a href="#" class="cta-btn">Let's Talk!</a>
+    </header>
+
+    <!-- Hero Wrapper — provides the scroll distance for the zoom -->
+    <div class="hero-wrapper">
+        <section class="hero" id="hero">
+          
+            <!-- Text Content -->
+            <div class="hero-content">
+                <p class="hero-subtitle">WE ARE</p>
+                <h1 class="hero-title" id="heroTitle">
+                    INVE<span class="n-letter" id="nLetter">N</span>TIVE
+                </h1>
+            </div>
+
+            <!-- Bottom tagline bar -->
+            <div class="hero-tagline">
+                <p>We design &amp; develop innovative digital experiences that deliver measurable results.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-inner">
+            <div class="about-left">
+                In the Dynamic Digital Realm, We stand as your strategic partner for growth.
+            </div>
+            <div class="about-right">
+                <div class="about-card" id="card1">
+                    <h3>Transforming Visions into Value.</h3>
+                    <p>We empower our clients by translating their ideas into tangible, profitable digital solutions.
+                    </p>
+                </div>
+                <div class="about-card" id="card2">
+                    <h3>Strategic Growth, Measurable Impact.</h3>
+                    <p>We optimize existing projects, breathing new life into them and driving them towards
+                        unprecedented success.</p>
+                </div>
+                <div class="about-card" id="card3">
+                    <h3>Building Brands that Resonate.</h3>
+                    <p>We develop your Brand's Identity and voice, resonating with target audiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extra scroll space -->
+    <div class="spacer"></div>
+
+    <!-- Spline Viewer Runtime -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"></script>
+
+    <!-- Lenis Smooth Scroll + GSAP Animation -->
+    <script type="module">
+        import Lenis from "https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/+esm";
+
+        // ─── Register GSAP plugins ───
+        gsap.registerPlugin(ScrollTrigger);
+
+        // ─── Lenis — synced with GSAP ───
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smoothWheel: true,
+            syncTouch: false,
+        });
+
+        lenis.on("scroll", ScrollTrigger.update);
+
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+
+        // ─── Preloader ───
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                const pre = document.getElementById("preloader");
+                pre.classList.add("hidden");
+                setTimeout(() => pre.remove(), 600);
+            }, 3000);
+        });
+
+        // ─── Hero Zoom Animation ───
+        const hero = document.getElementById("hero");
+        const nLetter = document.getElementById("nLetter");
+        const spline = document.querySelector("spline-viewer");
+
+        // Compute transform-origin from the "N" letter
+        function setOrigin() {
+            const nRect = nLetter.getBoundingClientRect();
+            const heroRect = hero.getBoundingClientRect();
+            const rx = ((nRect.left + nRect.width * 0.5 - heroRect.left) / heroRect.width) * 100;
+            const ry = ((nRect.top + nRect.height * 0.5 - heroRect.top) / heroRect.height) * 100;
+
+            gsap.set(hero, {
+                transformOrigin: `${rx}% ${ry}%`,
+                force3D: true,
+            });
+        }
+
+        setOrigin();
+        window.addEventListener("resize", setOrigin);
+
+        // The zoom-into-N scroll animation
+        gsap.to(hero, {
+            scale: 200,
+            rotation: -100,
+            backgroundColor: "#000",
+            ease: "power2.in",
+            force3D: true,
+            scrollTrigger: {
+                trigger: ".hero-wrapper",
+                start: "top top",
+                end: "bottom top",
+                scrub: 1.5, // slightly higher scrub for smoother interpolation
+                pin: hero,
+                pinSpacing: false,
+                anticipatePin: 1, // pre-pins slightly before trigger to avoid jump
+                onUpdate: (self) => {
+                    // Hide spline early to free GPU during heavy scale
+                    if (spline) {
+                        spline.style.display = self.progress > 0.03 ? "none" : "block";
+                    }
+                },
+                onLeave: () => {
+                    hero.style.visibility = "hidden";
+                },
+                onEnterBack: () => {
+                    hero.style.visibility = "visible";
+                },
+                onLeaveBack: () => {
+                    hero.style.visibility = "visible";
+                    if (spline) spline.style.display = "block";
+                },
+            },
+        });
+
+        // ─── About Section Animations ───
+        gsap.from(".about-left", {
+            opacity: 0,
+            x: -60,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".about",
+                start: "top 75%",
+                toggleActions: "play none none reverse",
+            },
+        });
+
+        gsap.utils.toArray(".about-card").forEach((card, i) => {
+            gsap.to(card, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                delay: i * 0.15,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".about",
+                    start: "top 60%",
+                    toggleActions: "play none none reverse",
+                },
+            });
+        });
+    </script>
+
+</body>
+
+</html>

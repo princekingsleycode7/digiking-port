@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - IRAID</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /*
+========================================
+Global Styles & Body
+========================================
+*/
+
+/* Import a modern font */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #232526, #414345);
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box; /* Ensures padding doesn't affect total width/height */
+}
+
+/*
+========================================
+Form Container & Main Styling
+========================================
+*/
+
+.contact-form-container {
+    max-width: 600px;
+    width: 100%;
+    background-color: rgba(20, 20, 20, 0.7);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Initial fade-in animation for the form */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-form h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.contact-form p {
+    text-align: center;
+    color: #b0b0b0;
+    margin-bottom: 2.5rem;
+}
+
+/*
+========================================
+Form Fields & Floating Label Animation
+========================================
+*/
+
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #555;
+    outline: none;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+/* The label for the input field */
+.form-label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: #aaa;
+    font-size: 1rem;
+    pointer-events: none; /* Allows clicks to go "through" the label to the input */
+    transition: all 0.3s ease;
+}
+
+/* --- The Animation Magic --- */
+/* When the input is focused or contains valid text, move and restyle the label */
+.form-input:focus + .form-label,
+.form-input:valid + .form-label {
+    top: -14px;
+    font-size: 0.8rem;
+    color: #4a90e2; /* A nice highlight color */
+}
+
+/* Highlight the bottom border when the input is focused */
+.form-input:focus {
+    border-bottom-color: #4a90e2;
+}
+
+/* Specific styling for the textarea to align the label correctly */
+#message + .form-label {
+    top: 10px;
+}
+
+#message:focus + .form-label,
+#message:valid + .form-label {
+    top: -14px;
+}
+
+/*
+========================================
+Submit Button Styling & Animation
+========================================
+*/
+
+.submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(90deg, #4a90e2, #357ABD);
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
+}
+
+.btn-text, .btn-icon {
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.4s ease;
+}
+
+.btn-icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(100px); /* Start icon off-screen */
+    opacity: 0;
+}
+
+/* On hover, slide the text out and the icon in */
+.submit-btn:hover .btn-text {
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.submit-btn:hover .btn-icon {
+    transform: translateX(-50%);
+    opacity: 1;
+}
+</style>
+</head>
+<body>
+
+    <div class="contact-form-container">
+        <form class="contact-form">
+            <h2>Get in Touch</h2>
+            <p>We'd love to hear from you. Fill out the form below to reach us.</p>
+
+            <!-- Name Field -->
+            <div class="form-group">
+                <input type="text" id="name" class="form-input" autocomplete="off" required>
+                <label for="name" class="form-label">Full Name</label>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <input type="email" id="email" class="form-input" autocomplete="off" required>
+                <label for="email" class="form-label">Email Address</label>
+            </div>
+
+            <!-- Subject Field -->
+            <div class="form-group">
+                <input type="text" id="subject" class="form-input" autocomplete="off" required>
+                <label for="subject" class="form-label">Subject</label>
+            </div>
+
+            <!-- Message Field -->
+            <div class="form-group">
+                <textarea id="message" class="form-input" rows="5" required></textarea>
+                <label for="message" class="form-label">Your Message</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </span>
+            </button>
+        </form>
+    </div>
+
+</body>
+</html>

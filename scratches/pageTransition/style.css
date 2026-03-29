@@ -1,0 +1,100 @@
+/* --- Basic Setup & Typography --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&family=Oswald:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #ffffff;
+    color: #0f0f0f;
+    overflow: hidden; /* Prevents scrollbars during transition */
+}
+
+/* --- Navigation --- */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+nav .nav-link {
+    font-family: 'Roboto Mono', monospace;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 0 1rem;
+}
+
+/* --- Page Content --- */
+main .page {
+    display: none; /* Hide all pages by default */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+main .page.active {
+    display: flex; /* Show only the active page */
+}
+
+main .page h1 {
+    font-size: 10vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+/* --- Transition Overlay and Blocks --- */
+#transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    z-index: 999;
+    pointer-events: none; /* Allows clicks to pass through when not active */
+}
+
+#transition-overlay .row {
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+
+#transition-overlay .block {
+    flex: 1;
+    background-color: #667067;
+    transform: scaleY(0); /* Start scaled down */
+    transition: transform 0.5s;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --- Animation States --- */
+
+/* State for animating IN */
+#transition-overlay.in .block {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+/* State for animating OUT */
+#transition-overlay.out .block {
+    transform: scaleY(0);
+    transform-origin: bottom;
+}

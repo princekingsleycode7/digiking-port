@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digi King - AI Automation Agency</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GSAP & Lenis -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="dark-theme">
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader-content">
+            <span>DI</span><span>GI</span><span>KING</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">DigiKing</a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#process">Process</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-wrapper">
+        <section class="hero" id="hero">
+            <div class="hero-background">
+                <div class="glow-orb"></div>
+                <div class="grid-overlay"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="badge">AI REVENUE AUTOMATION</div>
+                <h1 class="hero-title">WE CLONE YOUR <br>BEST <span class="highlight">RECEPTIONIST</span>.</h1>
+                <p class="hero-subtitle">Deploy a 24/7 AI Voice Agent that answers 10,000 calls at once, books
+                    reservations instantly, and never asks for a salary.</p>
+
+                <div class="hero-actions">
+                    <button class="primary-btn">Hear the AI Speak</button>
+                    <button class="secondary-btn">View Services</button>
+                </div>
+            </div>
+
+            <!-- Stats / Social Proof -->
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">24/7</span>
+                    <span class="stat-label">Availability</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">10k+</span>
+                    <span class="stat-label">Concurrent Calls</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">0s</span>
+                    <span class="stat-label">Wait Time</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>AI Solutions That Take Your Business to the Next Level</h2>
+                <p>Automate repetitive tasks and focus on growth.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon-box">🤖</div>
+                    <h3>Automate Repetitive Tasks</h3>
+                    <p>Free up your team's time by letting AI handle routine inquiries and scheduling.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box">⚡</div>
+                    <h3>Accelerate Sales Growth</h3>
+                    <p>Never miss a lead. Our AI engages prospects instantly and books appointments.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box">⚙️</div>
+                    <h3>Build Smarter Systems</h3>
+                    <p>Integrate AI into your existing workflows for seamless operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Simple, Smart, and Scalable Process</h2>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3>Discovery</h3>
+                    <p>We analyze your business needs and identify automation opportunities.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>Build & Train</h3>
+                    <p>We configure your custom AI agent and train it on your business knowledge.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>Deploy & Scale</h3>
+                    <p>Launch your AI agent and watch it handle thousands of conversations effortlessly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Best AI Automation, at the Right Price</h2>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$37<span>/month</span></div>
+                    <ul class="features-list">
+                        <li>24/7 Availability</li>
+                        <li>Basic Call Handling</li>
+                        <li>Appointment Booking</li>
+                        <li>Email Support</li>
+                    </ul>
+                    <button class="pricing-btn">Get Started</button>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <h3>Pro</h3>
+                    <div class="price">$75<span>/month</span></div>
+                    <ul class="features-list">
+                        <li>Everything in Starter</li>
+                        <li>Advanced Logic</li>
+                        <li>CRM Integration</li>
+                        <li>Priority Support</li>
+                        <li>Custom Voice</li>
+                    </ul>
+                    <button class="pricing-btn">Get Started</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom</div>
+                    <ul class="features-list">
+                        <li>Full Customization</li>
+                        <li>Dedicated Account Manager</li>
+                        <li>SLA Support</li>
+                        <li>On-premise Deployment</li>
+                    </ul>
+                    <button class="pricing-btn">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>We’ve Got the Answers You’re Looking For</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">How does the AI Voice Agent work? <span
+                            class="toggle">+</span></button>
+                    <div class="faq-answer">It uses advanced natural language processing to understand caller intent and
+                        respond in real-time with a human-like voice.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Can I customize the voice? <span class="toggle">+</span></button>
+                    <div class="faq-answer">Yes, we offer a variety of voice options, and on higher plans, we can even
+                        clone specific voices.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">does it integrate with my CRM? <span class="toggle">+</span></button>
+                    <div class="faq-answer">Absolutely. We integrate with major CRMs like HubSpot, Salesforce, and Zoho,
+                        as well as Calendly for bookings.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>DigiKing</h3>
+                <p>Automating the future of business revenue.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Digi King Agency. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

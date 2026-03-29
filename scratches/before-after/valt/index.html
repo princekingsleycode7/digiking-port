@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Infinite Image Scroll</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="main-container">
+        
+        <!-- The Hero Header goes inside the container -->
+        <div class="hero-header">
+            <h1 class="scrollh1">CodegridPRO</h1>
+            <p class="scrollp">One subscription, endless web design.</p>
+        </div>
+
+        <!-- The scroll rows also go inside the container -->
+        <div class="scroll-row" id="row1">
+            <!-- Image items here -->
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1617991192305-ec9383c51631?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8N3x8dWklMjBkc2lnbnx8fA%3D%3D&ixlib=rb-1.2.1&q=80&w=400" alt="UI Element 1"></div>
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8MXx8dWklMjBkc2lnbnx8fA%3D%3D&ixlib=rb-1.2.1&q=80&w=400" alt="UI Element 2"></div>
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1559028006-44d08a9a697a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8Mnx8dWklMjBkc2lnbnx8fA%3D%3D&ixlib=rb-1.2.1&q=80&w=400" alt="UI Element 3"></div>
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1607706189992-eae578626c86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8NHx8dWklMjBkc2lnbnx8fA%3D%3D&ixlib=rb-1.2.1&q=80&w=400" alt="UI Element 4"></div>
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1581287053822-fd7bf4f4bf3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8NXx8dWklMjBkc2lnbnx8fA%3D%3D&ixlib=rb-1.2.1&q=80&w=400" alt="UI Element 5"></div>
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1621361253013-b21921f0067b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8MTB8fHVpJTIwZHNpZ258fHw%3D&ixlib=rb-1.2.1&q=80&w=400" alt="UI Element 6"></div>
+        </div>
+        <div class="scroll-row" id="row2">
+            <!-- Image items here -->
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8Nnx8ZGFyayUyMGNvZGV8fHw%3D&ixlib=rb-1.2.1&q=80&w=400" alt="Code Element 1"></div>
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8M3x8ZGFyayUyMGNvZGV8fHw%3D&ixlib=rb-1.2.1&q=80&w=400" alt="Code Element 2"></div>
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1542831371-d5f9d4f4561d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8MTF8fGRhcmslMjBjb2RlfHx8&ixlib=rb-1.2.1&q=80&w=400" alt="Code Element 3"></div>
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1618335432098-936b8a8a3074?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8MTJ8fGRhcmslMjBjb2RlfHx8&ixlib=rb-1.2.1&q=80&w=400" alt="Code Element 4"></div>
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8MTV8fGRhcmslMjBjb2RlfHx8&ixlib=rb-1.2.1&q=80&w=400" alt="Code Element 5"></div>
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1592609931095-54a2168ae893?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8MTd8fGRhcmslMjBjb2RlfHx8&ixlib=rb-1.2.1&q=80&w=400" alt="Code Element 6"></div>
+        </div>
+        <div class="scroll-row" id="row3">
+            <!-- Image items here -->
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1610466024623-433f0a670404?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8M3x8M2QlMjByZW5kZXJ8fHw%3D&ixlib=rb-1.2.1&q=80&w=400" alt="3D Render 1"></div>
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1614926017360-16476145a19c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8Nnx8M2QlMjByZW5kZXJ8fHw%3D&ixlib=rb-1.2.1&q=80&w=400" alt="3D Render 2"></div>
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1598531610923-994640139049?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8OXx8M2QlMjByZW5kZXJ8fHw%3D&ixlib=rb-1.2.1&q=80&w=400" alt="3D Render 3"></div>
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1611926653458-09294b3142d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8MTB8fDNkJTIwcmVuZGVyfHx8&ixlib=rb-1.2.1&q=80&w=400" alt="3D Render 4"></div>
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1608273397339-d65f43841b73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8MTJ8fDNkJTIwcmVuZGVyfHx8&ixlib=rb-1.2.1&q=80&w=400" alt="3D Render 5"></div>
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8MTR8fDNkJTIwcmVuZGVyfHx8&ixlib-rb-1.2.1&q=80&w=400" alt="3D Render 6"></div>
+        </div>
+
+    </main>
+
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

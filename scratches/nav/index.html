@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRAID - Landing Page Reveal Animation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="preloader">
+      <div class="preloader-intro-title">
+        <h1 class="preloader-h1">Integrated Rural Aid</h1>
+      </div>
+      <div class="preloader-outro-title">
+        <h1 class="preloader-h1">RAID</h1>
+      </div>
+    </div>
+
+    <div class="preloader-split-overlay">
+      <div class="preloader-intro-title">
+        <h1 class="preloader-h1">I</h1>
+      </div>
+      <div class="preloader-outro-title">
+        <h1 class="preloader-h1">IRAID</h1>
+      </div>
+    </div>
+
+    <div class="preloader-tags-overlay">
+      <div class="preloader-tag preloader-tag-1">
+        <p class="preloader-p">Community First</p>
+      </div>
+      <div class="preloader-tag preloader-tag-2">
+        <p class="preloader-p">Sustainable Growth</p>
+      </div>
+      <div class="preloader-tag preloader-tag-3">
+        <p class="preloader-p">Global Partnership</p>
+      </div>
+    </div>
+
+    <!-- Main page content that gets pushed down -->
+    <div class="main-container">
+      <section class="hero-section">
+        <div class="hero-img">
+          <img
+            src="../../IMG/New folder/water/P30.jpeg"
+            alt="Futuristic building in water"
+          />
+        </div>
+        <h1 class="hero-h1">Digital architecture that rises from the void.</h1>
+      </section>
+
+      <section class="hero-section">
+        <div class="hero-img">
+          <img
+            src="../../IMG/New folder/water/P44.jpeg"
+            alt="Futuristic building in water"
+          />
+        </div>
+        <h1 class="hero-h1">Digital architecture that rises from the void.</h1>
+      </section>
+
+      <section class="hero scrollsection">
+        <div class="hero-header">
+          <h1 class="scrollh1">CodegridPRO</h1>
+          <p>One subscription, endless web design.</p>
+        </div>
+
+        <div class="animated-icons">
+          <!-- Placeholders for icons -->
+          <div
+            class="animated-icon icon-1"
+            style="background-color: #4caf50"
+          ></div>
+          <div
+            class="animated-icon icon-2"
+            style="background-color: #ffc107"
+          ></div>
+          <div
+            class="animated-icon icon-3"
+            style="background-color: #2196f3"
+          ></div>
+          <div
+            class="animated-icon icon-4"
+            style="background-color: #f44336"
+          ></div>
+          <div
+            class="animated-icon icon-5"
+            style="background-color: #9c27b0"
+          ></div>
+        </div>
+
+        <h1 class="animated-text scrollh1">
+          <span class="text-segment">Delve into coding</span>
+          <div class="placeholder-icon"></div>
+          <span class="text-segment">without clutter.</span>
+          <span class="text-segment">Unlock source code</span>
+          <div class="placeholder-icon"></div>
+          <span class="text-segment">for every tutorial</span>
+          <div class="placeholder-icon"></div>
+          <span class="text-segment">published on the Codegrid</span>
+          <div class="placeholder-icon"></div>
+          <span class="text-segment">YouTube channel.</span>
+          <div class="placeholder-icon"></div>
+        </h1>
+      </section>
+      <section class="outro scrollsection">
+        <h1 class="scrollh1">Link in description</h1>
+      </section>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+      <div class="nav-logo">
+        <a href="#">Void Construct</a>
+      </div>
+
+      <div class="menu-toggle">
+        <p id="menu-open">Menu</p>
+        <p id="menu-close">Close</p>
+      </div>
+    </nav>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div class="menu-overlay">
+      <div class="menu-content">
+        <div class="menu-items">
+          <div class="menu-col-lg">
+            <div class="menu-preview-img">
+              <img
+                src="../../IMG/New folder/water/P20.jpeg"
+                alt="Preview Image 1"
+              />
+            </div>
+          </div>
+          <div class="menu-col-sm">
+            <div class="menu-links">
+              <div class="menu-link">
+                <a href="#" data-img="../../IMG/New folder/water/P24.jpeg"
+                  >Visions</a
+                >
+              </div>
+              <div class="menu-link">
+                <a href="#" data-img="../../IMG/New folder/water/P36.jpeg"
+                  >Core</a
+                >
+              </div>
+              <div class="menu-link">
+                <a href="#" data-img="../../IMG/New folder/water/P44.jpeg"
+                  >Signals</a
+                >
+              </div>
+              <div class="menu-link">
+                <a href="#" data-img="../../IMG/New folder/water/P47.jpeg"
+                  >Connect</a
+                >
+              </div>
+            </div>
+            <div class="menu-socials">
+              <div class="menu-social"><a href="#">Behance</a></div>
+              <div class="menu-social"><a href="#">Dribbble</a></div>
+              <div class="menu-social"><a href="#">LinkedIn</a></div>
+              <div class="menu-social"><a href="#">Instagram</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-footer">
+          <div class="menu-col-lg">
+            <a href="#">Run Sequence</a>
+          </div>
+          <div class="menu-col-sm">
+            <a href="#">Origin</a>
+            <a href="#">Join Signal</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.digiking.com.ng/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Feb 2026 17:42:19 GMT -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <link rel="icon" type="image/x-icon" href="media/settings/favicon.html" />
+
+  <!-- Preconnect & Prefetch -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin="anonymous" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com/" />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" />
+
+  <!-- Google Font -->
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    as="style" onload="this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" />
+  </noscript>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "www.googletagmanager.com/gtm5445/index5445.html?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-TKWKPXQG");
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Meta Title -->
+  <title>DiGiKing - Turn Ideas into Profitable Digital Solutions</title>
+
+  <!-- Meta Description -->
+  <meta name="description"
+    content="DiGiKing: Expert digital agency specializing in diverse solutions, branding, and project optimization. Transform your vision into a successful reality." />
+
+  <!-- Meta Keywords -->
+  <meta name="keywords"
+    content="digital agency, branding, web development, digital strategy, project optimization, content writer / Creator" />
+
+  <!-- Meta Author -->
+  <meta name="author" content="DiGiKing Agency" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="static/css/style.min.css" />
+  <link rel="stylesheet" href="static/css/main.min.css" />
+  <link rel="stylesheet" href="static/css/landing.css" />
+  <link rel="stylesheet" href="static/css/js_chat/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hammersmith+One&amp;family=Quantico:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+    rel="stylesheet">
+
+
+  <style>
+    /* Override nav link color on landing page */
+    .landings header nav ul li a {
+      color: white !important;
+      background-color: rgb(0, 0, 0);
+      padding: 15px;
+    }
+
+    .landings header nav {
+      border-radius: 10px !important;
+    }
+
+    .landing {
+      background-image: repeating-linear-gradient(to right,
+          transparent 0 100px,
+          #25283b22 100px 101px),
+        repeating-linear-gradient(to bottom,
+          transparent 0 100px,
+          #25283b22 100px 101px);
+    }
+
+    .transition-text {
+      color: red;
+    }
+
+    /* ... (your existing CSS) ... */
+
+    /* Popup Styles */
+    .popup {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    .popup-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      /* Could be more or less, depending on screen size */
+      border-radius: 5px;
+      position: relative;
+      /* For close button positioning */
+    }
+
+    .close-button {
+      color: #aaa;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 28px;
+      font-weight: bold;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .close-button:hover,
+    .close-button:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .popup-content p {
+      margin-top: 20px;
+    }
+
+    .popup-success {
+      border: 2px solid green;
+    }
+
+    .popup-error {
+      border: 2px solid red;
+    }
+
+    /* Floating chat icon */
+    #chatIcon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: rgb(247, 251, 255);
+      color: rgb(90, 40, 40);
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    /* Chat modal container */
+    #chatModal {
+      display: none;
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      width: 320px;
+      max-height: 500px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      z-index: 1001;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #chatModal1 {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      width: 320px;
+      max-height: 500px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      z-index: 1001;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    /* Chat header */
+    #chatHeader {
+      background-color: #007bff;
+      color: white;
+      padding: 8px 10px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #chatHeader .header-title {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    #chatHeader .header-buttons {
+      display: flex;
+      gap: 5px;
+    }
+
+    .header-btn {
+      background: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 0 5px;
+    }
+
+    .header-btn:hover {
+      opacity: 0.8;
+    }
+
+    /* Chat body */
+    #chatBody {
+      padding: 10px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      flex: 1;
+      max-height: 260px;
+      background-color: #f9f9f9;
+    }
+
+    .message {
+      margin: 5px 0;
+      word-wrap: break-word;
+    }
+
+    .user-message {
+      text-align: right;
+      color: #0056b3;
+      background-color: #e7f3ff;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .assistant-message {
+      text-align: left;
+      color: #155724;
+      background-color: #d4edda;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    /* Chat footer */
+    #chatFooter {
+      padding: 8px 10px;
+      border-top: 1px solid #ccc;
+      display: flex;
+    }
+
+    #chatInput {
+      flex: 1;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 5px;
+    }
+
+    #sendBtn {
+      padding: 5px 10px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #sendBtn:hover {
+      background-color: #0056b3;
+    }
+
+    @media screen and (max-width: 768px) {
+      spline-viewer {
+        position: absolute !important;
+        margin: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        left: 0 !important;
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        z-index: -3 !important;
+      }
+
+      .tiny {
+        color: white;
+        width: 100vw;
+        text-align: center;
+      }
+
+      .h1 {
+
+        width: 100vw !important;
+        font-size: 9vw !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: center !important;
+        position: absolute !important;
+
+      }
+    }
+
+    @media screen and (min-width: 300px) and (max-width: 480px) {
+      /* Make the headline scale to full screen width on mobile */
+
+    }
+
+    /* New classes for inventive h1 elements */
+    .inventive-desktop {
+      display: block;
+    }
+
+    .inventive-mobile {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      .inventive-desktop {
+        display: none !important;
+      }
+
+      .inventive-mobile {
+        display: block !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="landings">
+  <!-- Add this right after the opening <body> tag -->
+  <div class="preloader">
+    <div class="preloader-text">
+      <span class="letter">L</span>
+      <span class="letter">O</span>
+      <span class="letter">A</span>
+      <span class="letter">D</span>
+      <span class="letter">I</span>
+      <span class="letter">N</span>
+      <span class="letter">G</span>
+      <span class="dot">.</span>
+      <span class="dot">.</span>
+      <span class="dot">.</span>
+    </div>
+  </div>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKWKPXQG" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <div class="left desktop-navigation">
+      <a href="index-2.html">
+        <div class="logo">
+          <h1 style="
+                color: white;
+                font-size: 2rem;
+                padding: 0px;
+                margin: 0;
+                margin-top: -22px;
+              ">
+            DiGiKing
+          </h1>
+        </div>
+      </a>
+    </div>
+    <div class="middle desktop-navigation">
+      <nav>
+        <ul>
+          <li>
+            <a href="#aabout"> About </a>
+          </li>
+          <li>
+            <a href="#wworks"> Our Work </a>
+          </li>
+
+          <li>
+            <a href="blog/index.html"> Our Content </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Chat modal -->
+    <!-- Chat modal -->
+    <div id="chatModal" style="display: none;">
+      <div id="chatHeader">
+        <span class="header-title">Chat Support</span>
+        <div class="header-buttons">
+          <button id="clearHistoryBtn" class="header-btn" title="Clear History">🗑️</button>
+          <button id="closeChatBtn" class="header-btn" title="Close Chat">✖</button>
+        </div>
+      </div>
+      <div id="chatBody"></div>
+      <div id="chatFooter">
+        <input type="text" id="chatInput" placeholder="Type your message..." />
+        <button id="sendBtn">Send</button>
+      </div>
+    </div>
+    <!-- Chat Icon -->
+    <div id="chatIcon">💬</div>
+
+    <div class="right desktop-navigation">
+      <a href="contact-us/index.html">
+        <button>Let's Talk!</button>
+      </a>
+    </div>
+    <div class="mobile-navigation">
+      <div class="left">
+        <a href="index-2.html">
+          <div class="logo" data-aos="fade-up" data-aos-duration="2000">
+            <h1 style="
+                  color: white;
+                  font-size: 2rem;
+                  padding: 0px;
+                  margin: 0;
+                  margin-top: 15px;
+                ">
+              DiGiKing
+            </h1>
+          </div>
+        </a>
+      </div>
+      <div class="right">
+        <div data-aos="fade-up" data-aos-duration="3000" class="hamburger" id="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+
+        <nav class="menu" id="menu">
+          <ul>
+            <li data-aos="fade-up" data-aos-duration="1000">
+              <a href="about-us/index.html"> About </a>
+            </li>
+            <li data-aos="fade-up" data-aos-duration="2000">
+              <a href="work/work.html"> Our Work </a>
+            </li>
+
+            <li data-aos="fade-up" data-aos-duration="3000">
+              <a href="blog/index.html"> Our Content </a>
+            </li>
+          </ul>
+
+          <div class="close-container" id="hamburger_close">
+            <div class="line-1 line"></div>
+            <div class="line-2 line"></div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="landing" id="landing" style="
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #f1f1f1;
+          will-change: transform;
+          transform: translateZ(0);
+          backface-visibility: hidden;
+        ">
+      <div class="content-container" style="
+          background-color: rgba(211, 211, 211, 0); 
+          padding: 20px;
+          border-radius: 10px;
+          width:100%;
+          text-align: center;
+          backdrop-filter: blur(1.5px);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        ">
+        <p data-aos="fade-up" class="tiny" style="
+        margin-top: 180px;
+        font-size: 2rem !important;
+        font-family: Hammersmith One, sans-serif;
+        font-weight: 700;
+        text-align: left;
+        font-style: normal;">
+          WE ARE
+        </p>
+        <div class="mobilev"
+          style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 20px;">
+
+          <h1 data-aos="fade-up" data-aos-duration="3000" class="h1 inventive-desktop" style="
+              -webkit-text-fill-color: rgb(255, 0, 0);
+              text-transform: uppercase;
+              text-shadow: 4px 4px 4px black;
+              font-size: 10rem;
+              margin: 0;
+              font-family: Hammersmith One, sans-serif;
+              font-weight: 700;
+              font-style: normal;">
+
+            Inve<span id="c" class="spam">n</span>tive
+          </h1>
+
+          <p data-aos="fade-up" data-aos-duration="100" class="we inventive-mobile" style="
+              -webkit-text-fill-color: rgb(209, 209, 209);
+              text-transform: uppercase;
+              text-shadow: 4px 4px 4px black;
+              font-size: 2.3rem !important;
+              margin:10px 10px;
+              width: 100vw;
+              font-family: Hammersmith One, sans-serif;
+              font-weight: 700;
+              font-style: normal;">
+
+            WE ARE
+          <p>
+            </br>
+          <h1 data-aos="fade-up" data-aos-duration="3000" class="inventive-mobile"
+            style="color: red; text-transform: uppercase; text-shadow: 4px 4px 4px black; font-size: 3.5rem !important; margin-top: -50px !important; font-family: Hammersmith One, sans-serif; font-weight: 700; font-style: normal;">
+
+            Inve<span id="c2" class="spam">n</span>tive
+          </h1>
+        </div>
+      </div>
+      
+      <style>
+        @media screen and (max-width: 768px) {
+          spline-viewer {
+            position: absolute !important;
+            margin: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            left: 0 !important;
+            top: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            z-index: -3 !important;
+          }
+        }
+      </style>
+
+      <div class="overlay" style="position: absolute; bottom: 0; height:70px; width:100vw; z-index:99;
+background: rgba(240, 240, 240, 0.85);
+border-top: 1px solid rgba(255, 255, 255, 0.3);
+border-radius: 10px 10px 0 0;
+will-change: transform;
+transform: translateZ(0);
+">
+
+        <p class="spaa" style="font-size:18px; font-weight:600; text-align: center;
+ color: #000000; /* Darker text color for better contrast on light background */
+ text-shadow: none; /* Removed text shadow - might not be needed with glasmorphism */
+ ">
+          We design & develop innovative digital experiences deliver measurable results.
+        </p>
+      </div>
+    </section>
+    <div id="#aabout"></div>
+    <section class="about-us">
+      <div class="about-content">
+        <div class="story-1 left" style="color: red" id="aabout">
+          In the Dynamic Digital Realm, We stand as...
+          <a href="about-us/index.html">
+            <img src="static/img/circle-arrow.svg" alt="">
+
+          </a>
+        </div>
+
+        <div class="content-container right">
+          <div class="content-one content">
+            <div class="title">Transforming Visions into Value.</div>
+            <div class="description">
+              We empower our clients by translating their ideas into tangible,
+              profitable digital solutions.
+            </div>
+          </div>
+          <div class="content-two content">
+            <div class="title">Strategic Growth, Measurable Impact.</div>
+            <div class="description">
+              We optimize existing projects, breathing new life into them and
+              driving them towards unprecedented success.
+            </div>
+          </div>
+          <div class="content-three content">
+            <div class="title">Building Brands that Resonate</div>
+            <div class="description">
+              We develop your Brand's Identity, and voice, resonating with
+              target audiences.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="blob"></div>
+    </section>
+
+    <div class="service-transition">
+      <div class="transition-text" style="z-index: 39" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 38" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 37" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 36" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 35" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 34" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 33" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 32" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 31" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 30" aria-hidden="true">
+        Services
+      </div>
+
+      <div class="transition-text" style="z-index: 29" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 28" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 27" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 26" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 25" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 24" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 23" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 22" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 21" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 20" aria-hidden="true">
+        Services
+      </div>
+
+      <div class="transition-text" style="z-index: 19" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 18" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 17" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 16" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 15" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 14" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 13" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 12" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 11" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 10" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 9" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 8" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 7" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 6" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 5" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 4" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 3" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 2" aria-hidden="true">
+        Services
+      </div>
+      <div class="transition-text" style="z-index: 1" aria-hidden="true">
+        Services
+      </div>
+    </div>
+
+    <section class="service">
+      <div class="service-card-container">
+        <div class="service-card">
+          <div class="top">
+            <div class="slider">
+              <div class="slide">Custom Web Apps</div>
+              <div class="slide">E-commerce Solutions</div>
+              <div class="slide">Responsive Design</div>
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="title">Web Development</div>
+            <a href="services/web-development/index.html"> </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="top">
+            <div class="slider">
+              <div class="slide">Brand Strategy</div>
+              <div class="slide">Brand Identity</div>
+              <div class="slide">Brand Messaging</div>
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="title">Branding</div>
+            <a href="services/mobile-app-development/index.html"> </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="top">
+            <div class="slider">
+              <div class="slide">Market Analysis</div>
+              <div class="slide">User Experience</div>
+              <div class="slide">Growth Hacking</div>
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="title">Digital Strategy</div>
+            <a href="services/ui-ux/index.html"> </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="top">
+            <div class="slider">
+              <div class="slide">Machine Learning</div>
+              <div class="slide">Deep Learning</div>
+              <div class="slide">Natural Language Processing</div>
+              <div class="slide">Computer Vision</div>
+              <div class="slide">AI Model Training</div>
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="title">Artificial Intelligence</div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="top">
+            <div class="slider">
+              <div class="slide">Social Media Marketing</div>
+              <div class="slide">SEO</div>
+              <div class="slide">PPC</div>
+              <div class="slide">Creative Designing</div>
+              <div class="slide">Video Editing</div>
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="title">Digital Marketing</div>
+            <a href="services/digital-marketing/index.html"> </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="top">
+            <div class="slider">
+              <div class="slide">Performance Audits</div>
+              <div class="slide">Conversion Rate Optimization</div>
+              <div class="slide">Scalability</div>
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="title">Project Optimization</div>
+            <a href="services/blockchain/index.html"> </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p class="big-text-container">
+      We are your trusted partner, helping you craft cutting-edge solutions
+      and strategies that bring your ambitious visions to life, making your
+      <span style="font-weight: 600; color: red"> boldest </span>ideas a
+      <span style="color: red; font-weight: 600">profitable reality</span>.
+    </p>
+
+    <section class="work-container">
+      <div class="center-hero-container">
+        <div class="center-hero">Our</div>
+        <div class="center-hero">Featured</div>
+        <div class="center-hero" id="wworks">Projects</div>
+      </div>
+
+      <div class="marquee marquee-1">
+        <ul>
+          <li>Web Applications</li>
+          <li>Branding</li>
+          <li>Ecommerce</li>
+          <li>Digital Strategy</li>
+          <li>Mobile Solutions</li>
+          <li>Brand Building</li>
+          <li>Digital Marketing</li>
+          <li>Project Optimization</li>
+          <li>AI</li>
+        </ul>
+        <ul aria-hidden="true">
+          <li>Web Applications</li>
+          <li>Branding</li>
+          <li>Ecommerce</li>
+          <li>Digital Strategy</li>
+          <li>Mobile Solutions</li>
+          <li>Brand Building</li>
+          <li>Digital Marketing</li>
+          <li>Project Optimization</li>
+          <li>AI</li>
+        </ul>
+      </div>
+
+      <div class="marquee marquee-2">
+        <ul aria-hidden="true">
+          <li>Fintech</li>
+          <li>Healthcare</li>
+          <li>Ecommerce</li>
+          <li>Property Tech</li>
+          <li>Legal Tech</li>
+          <li>Marketplaces</li>
+          <li>Energy</li>
+        </ul>
+        <ul>
+          <li>Fintech</li>
+          <li>Healthcare</li>
+          <li>Ecommerce</li>
+          <li>Property Tech</li>
+          <li>Legal Tech</li>
+          <li>Marketplaces</li>
+          <li>Energy</li>
+        </ul>
+      </div>
+
+      <div class="work-grid">
+        <div class="work-item">
+          <div class="work-main-left">
+            <div class="top work-name">VISIONARIES</div>
+            <div class="bottom">
+              <div class="fade-slider">
+                <!-- <div class="slide">
+                            <img loading="lazy" src="/static/web/img/work/quickso/1.png" alt="">
+                        </div> -->
+                <div class="slide">
+                  <img loading="lazy" src="static/img/4.png" alt="" />
+                </div>
+                <div class="slide">
+                  <img loading="lazy" src="static/img/2009.png" alt=""
+                    style="width: 100%; height: 100%; object-fit: cover; margin:2px;" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="work-main-right">
+            <div class="top">
+              <canvas id="work-4-model"> </canvas>
+            </div>
+            <div class="middle">
+              <ul>
+                <li>Team Portfolio</li>
+              </ul>
+            </div>
+            <div class="bottom" style="text-align: justify; ">
+              This project is the hero section design for DigiKing's portfolio website, serving as the initial point of
+              contact for visitors. The landing page is designed to immediately capture attention and communicate the
+              team's visionary approach to digital design and development. It employs a striking cosmic aesthetic to
+              evoke innovation, exploration, and limitless possibilities.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p class="big-text-container">
+      Let us take the complexities of your digital initiatives, enabling you
+      to concentrate on nurturing your vision and reaching your objectives.
+
+      <a href="work/work.html">
+        <button>View more of our work</button>
+      </a>
+    </p>
+
+    <section class="work-model-container">
+      <div class="left">
+        <div class="title work-model-title">Our modes of working</div>
+      </div>
+
+      <div class="right">
+        <div class="model-detail">
+          <div class="heading">
+            <h3>Project-Based</h3>
+
+          </div>
+          <p class="detail">
+            Description: One-time assistance with a clear scope for optimal
+            project.
+          </p>
+        </div>
+
+        <div class="model-detail">
+          <div class="heading">
+            <h3>Dedicated Team</h3>
+
+          </div>
+          <p class="detail">
+            Ongoing assistance with a dedicated team for support and
+            maintenance for your projects..
+          </p>
+        </div>
+
+        <div class="model-detail">
+          <div class="heading">
+            <h3>Consultation</h3>
+
+          </div>
+          <p class="detail">
+            We provide consultation services to help you make informed
+            decisions about your technology stack, architecture, and
+            development process.
+          </p>
+        </div>
+
+        <div class="model-detail">
+          <div class="heading">
+            <h3>White Labelling</h3>
+
+          </div>
+          <p class="detail">
+            If you are a marketing company or a design agency, we can work as
+            your technology partner, providing you with the technical
+            expertise you need to deliver high-quality projects to your
+            clients.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-container">
+      <div class="quote-container">
+        <div class="idea">
+          <div class="from white-text">from</div>
+          <div class="idea red-text">idea</div>
+        </div>
+        <div class="delivery">
+          <div class="to white-text">to</div>
+          <div class="delivery red-text">delivery</div>
+        </div>
+        <div class="beyond">
+          <div class="and white-text">and</div>
+          <div class="beyond red-text">beyond</div>
+        </div>
+      </div>
+
+      <div class="contact-us-section" id="ending">
+        <div class="title">
+          <h2>
+            Let's <br />
+            <span id="contact-c">C</span>onnect
+          </h2>
+          <div id="chatIcon">💬</div>
+
+          <!-- Chat modal -->
+          <div id="chatModal">
+            <div id="chatHeader">
+              <div class="header-title">Gemini Chat</div>
+              <div class="header-buttons">
+                <button id="clearHistoryBtn" class="header-btn" title="Clear History">
+                  🗑
+                </button>
+                <button id="closeChatBtn" class="header-btn" title="Close Chat">
+                  ✖
+                  🗑
+                </button>
+                <button id="closeChatBtn" class="header-btn" title="Close Chat">
+                  ✖
+                </button>
+              </div>
+            </div>
+            <div id="chatBody"></div>
+            <div id="chatFooter">
+              <input type="text" id="chatInput" placeholder="Type your message..." />
+              <button id="sendBtn">Send</button>
+            </div>
+          </div>
+        </div>
+        <div class="form-container" id="ending-form" data-ending-reached="false">
+          <form action="https://www.digiking.com.ng/connect" method="post">
+            <div class="form-grid">
+              <div class="input-row">
+                <div class="input-container">
+                  <div class="label-container">
+                    <label for="id_email">Name</label>
+                    <!-- Display field label -->
+                  </div>
+
+                  <div class="input">
+                    <input type="text" name="name" required id="name" />
+                    <!-- Display the form field (input, textarea, etc.) -->
+                  </div>
+                </div>
+                <div class="input-container">
+                  <div class="label-container">
+                    <label for="id_email">Email</label>
+                    <!-- Display field label -->
+                    <span class="help-icon" style="
+                          display: inline-flex;
+                          justify-content: center;
+                          align-items: center;
+                          width: 20px;
+                          height: 20px;
+                          border-radius: 50%;
+                          border: 1px solid #ccc;
+                          background-color: #f0f0f0;
+                          color: #333;
+                          font-size: 14px;
+                          margin-left: 5px;
+                          cursor: pointer;
+                          position: relative;
+                        "
+                      onmouseover="this.querySelector('.tooltip-text').style.visibility='visible'; this.querySelector('.tooltip-text').style.opacity='1';"
+                      onmouseout="this.querySelector('.tooltip-text').style.visibility='hidden'; this.querySelector('.tooltip-text').style.opacity='0';">?
+                      <span class="tooltip-text" style="
+                            visibility: hidden;
+                            width: 200px;
+                            background-color: black;
+                            color: #fff;
+                            text-align: center;
+                            padding: 10px;
+                            border-radius: 6px;
+                            position: absolute;
+                            z-index: 1;
+                            bottom: 125%;
+                            left: 50%;
+                            margin-left: -100px;
+                            opacity: 0;
+                            transition: opacity 0.3s, visibility 0.3s;
+                            box-sizing: border-box;
+                          ">
+                        Provide a valid email address where we can contact
+                        you.
+                      </span></span>
+                  </div>
+
+                  <div class="input">
+                    <input type="email" name="email" required id="id_email" />
+                    <!-- Display the form field (input, textarea, etc.) -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-row">
+                <div class="input-container">
+                  <div class="label-container">
+                    <label for="id_phone_number">Phone number</label>
+                    <!-- Display field label -->
+                    <span class="help-icon" style="
+                          display: inline-flex;
+                          justify-content: center;
+                          align-items: center;
+                          width: 20px;
+                          height: 20px;
+                          border-radius: 50%;
+                          border: 1px solid #ccc;
+                          background-color: #f0f0f0;
+                          color: #333;
+                          font-size: 14px;
+                          margin-left: 5px;
+                          cursor: pointer;
+                          position: relative;
+                        "
+                      onmouseover="this.querySelector('.tooltip-text').style.visibility='visible'; this.querySelector('.tooltip-text').style.opacity='1';"
+                      onmouseout="this.querySelector('.tooltip-text').style.visibility='hidden'; this.querySelector('.tooltip-text').style.opacity='0';">?
+                      <span class="tooltip-text" style="
+                            visibility: hidden;
+                            width: 200px;
+                            background-color: black;
+                            color: #fff;
+                            text-align: center;
+                            padding: 10px;
+                            border-radius: 6px;
+                            position: absolute;
+                            z-index: 1;
+                            bottom: 125%;
+                            left: 50%;
+                            margin-left: -100px;
+                            opacity: 0;
+                            transition: opacity 0.3s, visibility 0.3s;
+                            box-sizing: border-box;
+                          ">
+                        Enter your phone number including the area code.
+                      </span></span>
+                  </div>
+                  <div class="input">
+                    <input type="text" name="phone_number" maxlength="15" required id="id_phone_number" />
+                    <!-- Display the form field (input, textarea, etc.) -->
+                  </div>
+
+                  <!-- Display field errors -->
+                </div>
+                <div class="input-container">
+                  <div class="label-container">
+                    <label for="id_company_name">Company name</label>
+                    <!-- Display field label -->
+                    <span class="help-icon" style="
+                          display: inline-flex;
+                          justify-content: center;
+                          align-items: center;
+                          width: 20px;
+                          height: 20px;
+                          border-radius: 50%;
+                          border: 1px solid #ccc;
+                          background-color: #f0f0f0;
+                          color: #333;
+                          font-size: 14px;
+                          margin-left: 5px;
+                          cursor: pointer;
+                          position: relative;
+                        "
+                      onmouseover="this.querySelector('.tooltip-text').style.visibility='visible'; this.querySelector('.tooltip-text').style.opacity='1';"
+                      onmouseout="this.querySelector('.tooltip-text').style.visibility='hidden'; this.querySelector('.tooltip-text').style.opacity='0';">?
+                      <span class="tooltip-text" style="
+                            visibility: hidden;
+                            width: 200px;
+                            background-color: black;
+                            color: #fff;
+                            text-align: center;
+                            padding: 10px;
+                            border-radius: 6px;
+                            position: absolute;
+                            z-index: 1;
+                            bottom: 125%;
+                            left: 50%;
+                            margin-left: -100px;
+                            opacity: 0;
+                            transition: opacity 0.3s, visibility 0.3s;
+                            box-sizing: border-box;
+                          ">
+                        Enter your company or organization name.
+                      </span></span>
+                  </div>
+                  <div class="input">
+                    <input type="text" name="company_name" maxlength="100" required id="id_company_name" />
+                    <!-- Display the form field (input, textarea, etc.) -->
+                  </div>
+
+                  <!-- Display field errors -->
+                </div>
+              </div>
+
+              <div class="input-row">
+                <div class="input-container">
+                  <div class="label-container">
+                    <label for="id_budget">Budget</label>
+                    <!-- Display field label -->
+                    <span class="help-icon" style="
+                          display: inline-flex;
+                          justify-content: center;
+                          align-items: center;
+                          width: 20px;
+                          height: 20px;
+                          border-radius: 50%;
+                          border: 1px solid #ccc;
+                          background-color: #f0f0f0;
+                          color: #333;
+                          font-size: 14px;
+                          margin-left: 5px;
+                          cursor: pointer;
+                          position: relative;
+                        "
+                      onmouseover="this.querySelector('.tooltip-text').style.visibility='visible'; this.querySelector('.tooltip-text').style.opacity='1';"
+                      onmouseout="this.querySelector('.tooltip-text').style.visibility='hidden'; this.querySelector('.tooltip-text').style.opacity='0';">?
+                      <span class="tooltip-text" style="
+                            visibility: hidden;
+                            width: 200px;
+                            background-color: black;
+                            color: #fff;
+                            text-align: center;
+                            padding: 10px;
+                            border-radius: 6px;
+                            position: absolute;
+                            z-index: 1;
+                            bottom: 125%;
+                            left: 50%;
+                            margin-left: -100px;
+                            opacity: 0;
+                            transition: opacity 0.3s, visibility 0.3s;
+                            box-sizing: border-box;
+                          ">
+                        Mention your estimated project budget.
+                      </span></span>
+                  </div>
+                  <div class="input">
+                    <select name="budget" id="id_budget">
+                      <option value="less than $5000">less than $5000</option>
+
+                      <option value="$5000 - $10,000">$5000 - $10,000</option>
+
+                      <option value="$10,000 - $25,000" selected>
+                        $10,000 - $25,000
+                      </option>
+
+                      <option value="$25,000 - $50,000">
+                        $25,000 - $50,000
+                      </option>
+
+                      <option value="$50,000 - $100,000">
+                        $50,000 - $100,000
+                      </option>
+
+                      <option value="$100,000 and more">
+                        $100,000 and more
+                      </option>
+                    </select>
+                    <!-- Display the form field (input, textarea, etc.) -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-row">
+                <div class="input-container">
+                  <div class="label-container">
+                    <label for="id_message">Message</label>
+                    <!-- Display field label -->
+                  </div>
+                  <div class="input">
+                    <textarea name="message" cols="10" rows="10" id="id_message"></textarea>
+                    <!-- Display the form field (input, textarea, etc.) -->
+                  </div>
+
+                  <!-- Display help text if available -->
+
+                  <div class="help-text">
+                    Provide any additional information or project details
+                    here.
+                  </div>
+
+                  <!-- Display field errors -->
+                </div>
+              </div>
+            </div>
+
+            <div class="input-container">
+              <input type="submit" name="submit_button" value="Submit" class="generic-form-submit-button" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="scroll-reminder scroll-reminder--visible">
+      <!-- <img loading="lazy" src="/static/web/img/arrow-narrow-up.svg" alt="Scroll Down Arrow" class="scroll-reminder__arrow"> -->
+      <div class="right-angle-arrow"></div>
+      <span class="scroll-reminder__text">scroll to experience the journey</span>
+    </section>
+
+    <div class="global-cta-container">
+      <h2>Let's make something<br />great together.</h2>
+      <p>
+        Let us know what challenges you are trying to solve so we can help.
+      </p>
+      <a href="contact-us/index.html" class="cta-button"> Get Started </a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <img loading="lazy" style="width: 100%;" src="static/img/4.png" />
+    </div>
+  </footer>
+  <!-- Popup/Modal for Form Submission Feedback -->
+  <div id="form-status-popup" class="popup">
+    <div class="popup-content">
+      <span class="close-button" id="close-popup">×</span>
+      <p id="popup-message"></p>
+    </div>
+  </div>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+    integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+    data-cf-beacon='{"version":"2024.11.0","token":"63d8d795962f4e9aad3b08b2e9117860","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+    crossorigin="anonymous"></script>
+</body>
+
+<script type="module" src="../unpkg.com/%40splinetool/viewer%401.9.82/build/spline-viewer.js"></script>
+
+<!--ai chat-->
+
+<script type="module" src="static/js/main.js"></script>
+<script src="static/js/main.js" type="module"></script>
+
+<!-- Gsap Js -->
+<script src="static/js/gsap.min.js"></script>
+<script src="static/js/ScrollTrigger.min.js"></script>
+
+<!-- Lenis -->
+<script src="static/js/lenis.min.js"></script>
+
+<!-- Jquery -->
+<script src="static/js/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous"></script>
+<script src="static/js/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous"></script>
+
+<!-- Slick -->
+<script src="static/js/slick.min.js"
+  integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<link rel="stylesheet" href="static/css/slick-theme.min.css"
+  integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="static/css/slick-theme.min.css"
+  integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="static/css/slick.min.css"
+  integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="static/css/slick.min.css"
+  integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Chat Inline Script Removed (Moved to static/js/main.js) -->
+
+<!-- Scroll message Script-->
+<script>
+  /*
+    This script listens for scrolling events after the DOM is fully loaded.
+    It manages showing and hiding the scroll reminder element.
+    
+    Detailed Comments:
+    - The script retrieves the reminder container element from the DOM.
+    - It sets up a scroll event listener on the window.
+    - Whenever the user scrolls, it hides the reminder immediately.
+    - It uses a timeout to detect when the user stops scrolling.
+    - If the user stops scrolling for a given period (e.g., 1500 ms), it re-shows the reminder as a gentle nudge.
+    - The fade-in and fade-out effects are handled by CSS transitions in SCSS, so we only toggle classes here.
+  */
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the scroll reminder container element
+    var scrollReminder = document.querySelector(".scroll-reminder");
+
+    // Initialize variables for tracking scrolling and timing
+    var scrollTimeout = null;
+    var reminderVisible = true; // Initially visible
+
+    // Function to hide the reminder element
+    function hideReminder() {
+      // If already hidden, do nothing
+      if (!reminderVisible) return;
+      reminderVisible = false;
+      scrollReminder.classList.remove("scroll-reminder--visible");
+    }
+
+    // Function to show the reminder element
+    function showReminder() {
+      // If already visible, do nothing
+      if (reminderVisible) return;
+      reminderVisible = true;
+      scrollReminder.classList.add("scroll-reminder--visible");
+    }
+
+    // Add scroll event listener
+    window.addEventListener("scroll", function () {
+      // Hide the reminder immediately when user starts scrolling
+      hideReminder();
+
+      // Clear any previous timeout
+      if (scrollTimeout !== null) {
+        clearTimeout(scrollTimeout);
+      }
+
+      // Set a timeout to show the reminder again after user stops scrolling
+      scrollTimeout = setTimeout(function () {
+        // Check if the #ending-form has been marked as reached
+        var ending_form = document.getElementById("ending-form");
+        if (ending_form) {
+          var ending_reached = ending_form.getAttribute(
+            "data-ending-reached"
+          );
+          // Only show the reminder if the form isn't marked as "true"
+          // i.e., the user hasn't reached the end
+          if (ending_reached !== "true") {
+            showReminder();
+          }
+        } else {
+          // If for some reason the form doesn't exist, default to showing the reminder
+          showReminder();
+        }
+      }, 1500); // 1.5 seconds after scroll stops
+    });
+  });
+</script>
+
+<!-- BLOB -->
+<script type="importmap">
+    {
+      "imports": {
+        "three": "static/js/three.module.min.js",
+        "three/addons/": "static/js/three.js/examples/jsm/"
+      }
+    }
+  </script>
+<script type="importmap">
+    {
+      "imports": {
+        "three": "static/js/three.module.min.js",
+        "three/addons/": "static/js/three.js/examples/jsm/"
+      }
+    }
+  </script>
+
+<!-- BLOB -->
+<script type="module">
+  // Import only necessary modules to reduce bundle size
+  import {
+    PerspectiveCamera,
+    Scene,
+    Color,
+    DirectionalLight,
+    PointLight,
+    AmbientLight,
+    WebGLRenderer,
+    Vector2,
+    Clock,
+    Vector3,
+    ShaderMaterial,
+    UniformsUtils,
+  } from "three";
+
+  import { MarchingCubes } from "three/addons/objects/MarchingCubes.js";
+  import { ToonShader1 } from "three/addons/shaders/ToonShader.js";
+  import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+  import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+  import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
+  import { LuminosityShader } from "three/addons/shaders/LuminosityShader.js";
+  import { SobelOperatorShader } from "three/addons/shaders/SobelOperatorShader.js";
+  import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
+
+  // Import GSAP and ScrollTrigger
+  // import { gsap } from 'gsap';
+  // import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  gsap.registerPlugin(ScrollTrigger);
+
+  let container, composer, effectSobel;
+  let camera, scene, renderer;
+  let light, pointLight, ambientLight;
+  let effect, resolution;
+  let time = 0;
+  let clock = new Clock();
+  let mouse = new Vector2();
+
+  let effectController = {
+    speed: 0.5,
+    numBlobs: 16,
+    resolution: 70,
+    isolation: 80,
+    floor: false,
+    wallx: false,
+    wallz: false,
+  };
+
+  init();
+
+  function init() {
+    container = document.getElementById("blob");
+
+    // CAMERA
+    // camera = new PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
+    // camera.position.set(-500, 500, 1500);
+
+    // CAMERA
+    let radius = 1500;
+    camera = new PerspectiveCamera(
+      45,
+      window.innerWidth / window.innerHeight,
+      1,
+      10000
+    );
+    camera.position.set(0, 0, radius); // Set initial position based on scrollTrigger calculations
+    camera.lookAt(new Vector3(0, 0, 0)); // Ensure the camera looks at the center
+
+    // SCENE
+    scene = new Scene();
+    scene.background = new Color(0x050505);
+
+    // LIGHTS
+    light = new DirectionalLight(0xffffff, 3);
+    light.position.set(0.5, 0.5, 1);
+    scene.add(light);
+
+    pointLight = new PointLight(0xff7c00, 3, 0, 0);
+    pointLight.position.set(0, 0, 100);
+    scene.add(pointLight);
+
+    ambientLight = new AmbientLight(0x323232, 3);
+    scene.add(ambientLight);
+
+    // MATERIALS
+    let toonMaterial1 = createShaderMaterial(
+      ToonShader1,
+      light,
+      ambientLight
+    );
+
+    // MARCHING CUBES
+    resolution = 28;
+
+    effect = new MarchingCubes(resolution, toonMaterial1, true, true, 100000);
+    effect.position.set(0, 0, 0);
+    effect.scale.set(700, 700, 700);
+    effect.enableUvs = false;
+    effect.enableColors = false;
+    scene.add(effect);
+
+    // RENDERER
+    renderer = new WebGLRenderer({ antialias: false });
+    renderer.setPixelRatio(
+      window.devicePixelRatio > 1 ? 1.5 : window.devicePixelRatio
+    );
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setAnimationLoop(animate);
+    container.appendChild(renderer.domElement);
+
+    // EVENTS
+    window.addEventListener("resize", onWindowResize);
+    container.addEventListener("mousemove", onMouseMove);
+
+    // POSTPROCESSING
+    composer = new EffectComposer(renderer);
+    let renderPass = new RenderPass(scene, camera);
+    composer.addPass(renderPass);
+
+    // Grayscale conversion
+    let effectGrayScale = new ShaderPass(LuminosityShader);
+    composer.addPass(effectGrayScale);
+
+    // Sobel operator
+    effectSobel = new ShaderPass(SobelOperatorShader);
+    effectSobel.uniforms["resolution"].value.x =
+      50.01 * window.innerWidth * window.devicePixelRatio;
+    effectSobel.uniforms["resolution"].value.y =
+      10.01 * window.innerHeight * window.devicePixelRatio;
+    composer.addPass(effectSobel);
+
+    // Output pass
+    let outputPass = new OutputPass();
+    composer.addPass(outputPass);
+
+    // GSAP Animations
+    gsap.to(effectController, {
+      scrollTrigger: {
+        trigger: container,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+        // markers: true,
+        onEnter: () => {
+          effectController.speed = 0.5;
+        },
+        onUpdate: (self) => {
+          effectController.speed = 0.5;
+
+          // let progress = self.progress;
+          // let velocity = Math.abs(self.getVelocity() / 500);
+          // effectController.speed = 0.5 + velocity;
+
+          // Update camera position
+          // let radius = 1500;
+          // let angle = progress * Math.PI * 2;
+          // camera.position.x = radius * Math.sin(angle);
+          // camera.position.z = radius * Math.cos(angle);
+          // camera.lookAt(new Vector3(0, 0, 0));
+        },
+        onScrubComplete: () => {
+          effectController.speed = 0.5;
+        },
+      },
+    });
+  }
+
+  function onMouseMove(event) {
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+  }
+
+  function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    composer.setSize(window.innerWidth, window.innerHeight);
+
+    effectSobel.uniforms["resolution"].value.x =
+      window.innerWidth * window.devicePixelRatio;
+    effectSobel.uniforms["resolution"].value.y =
+      window.innerHeight * window.devicePixelRatio;
+  }
+
+  function createShaderMaterial(shader, light, ambientLight) {
+    let u = UniformsUtils.clone(shader.uniforms);
+
+    let material = new ShaderMaterial({
+      uniforms: u,
+      vertexShader: shader.vertexShader,
+      fragmentShader: shader.fragmentShader,
+    });
+
+    material.uniforms["uDirLightPos"].value = light.position;
+    material.uniforms["uDirLightColor"].value = light.color;
+    material.uniforms["uAmbientLightColor"].value = ambientLight.color;
+
+    return material;
+  }
+
+  function updateCubes(object, time, numblobs, floor, wallx, wallz) {
+    object.reset();
+
+    let subtract = 12;
+    let strength = 1.2 / ((Math.sqrt(numblobs) - 1) / 4 + 1);
+
+    for (let i = 0; i < numblobs; i++) {
+      let ballx =
+        Math.sin(i + 1.26 * time * (1.03 + 0.5 * Math.cos(0.21 * i))) * 0.27 +
+        0.5;
+      let bally =
+        Math.abs(Math.cos(i + 1.12 * time * Math.cos(1.22 + 0.1424 * i))) *
+        0.77;
+      let ballz =
+        Math.cos(i + 1.32 * time * 0.1 * Math.sin(0.92 + 0.53 * i)) * 0.27 +
+        0.5;
+
+      let distance = new Vector2(ballx, ballz).distanceTo(mouse);
+      if (distance < 0.1) {
+        ballx += (ballx - mouse.x) * 0.1;
+        ballz += (ballz - mouse.y) * 0.1;
+      }
+
+      object.addBall(ballx, bally, ballz, strength, subtract);
+    }
+
+    if (floor) object.addPlaneY(2, 12);
+    if (wallz) object.addPlaneZ(2, 12);
+    if (wallx) object.addPlaneX(2, 12);
+
+    object.update();
+  }
+
+  function animate() {
+    render();
+  }
+
+  function render() {
+    let delta = clock.getDelta();
+    time += delta * effectController.speed * 0.5;
+
+    // Limit the maximum speed to prevent performance issues
+    effectController.speed = Math.min(effectController.speed, 3);
+
+    // Adjust resolution based on device performance
+    let isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      effectController.resolution = Math.min(effectController.resolution, 40);
+    }
+
+    if (effectController.resolution !== resolution) {
+      resolution = effectController.resolution;
+      effect.init(Math.floor(resolution));
+    }
+
+    if (effectController.isolation !== effect.isolation) {
+      effect.isolation = effectController.isolation;
+    }
+
+    updateCubes(
+      effect,
+      time,
+      effectController.numBlobs,
+      effectController.floor,
+      effectController.wallx,
+      effectController.wallz
+    );
+
+    composer.render();
+  }
+</script>
+
+<!-- Main script -->
+<script>
+  function adjust_service_transition_font_size() {
+    // Reference screen width and font size
+    var referenceWidth = 1920;
+    var referenceFontSize = 120;
+
+    // Get the current screen width
+    var currentWidth = window.innerWidth;
+
+    if (currentWidth < 768) {
+      referenceFontSize = 360;
+    }
+
+    // Calculate the new font size proportionally
+    var newFontSize = (currentWidth / referenceWidth) * referenceFontSize;
+
+    // Apply the new font size to the element
+    var elements = document.querySelectorAll(
+      ".service-transition .transition-text"
+    );
+    elements.forEach(function (element) {
+      element.style.fontSize = newFontSize + "px";
+    });
+  }
+
+  // The size of the work-name will be dynamic
+  function fitTextToContainer() {
+    /**
+     * fitTextToContainer
+     *
+     * Iterates over each .work-name element and incrementally increases
+     * the font size from a minimal base until it no longer fits, then
+     * dials back the last font size that fit properly in the container.
+     *
+     * IMPORTANT:
+     * 1) Make sure .work-name (or its parent) has explicit width/height in CSS.
+     * 2) If the text is multi-line, this code will check both scrollHeight <= clientHeight and
+     *    scrollWidth <= clientWidth to ensure the text is fully contained.
+     * 3) If you want only a single line, you can force `white-space: nowrap;` to keep text from wrapping.
+     */
+    const workNames = document.querySelectorAll(".work-name");
+
+    workNames.forEach((workName) => {
+      // Clear any previous inline style so we start fresh.
+      workName.style.fontSize = "";
+
+      // Let's get whatever the browser *thinks* is the base size
+      let fontSize = parseFloat(window.getComputedStyle(workName).fontSize);
+
+      // We'll also measure the element's own container size
+      const containerWidth = workName.clientWidth;
+      const containerHeight = workName.clientHeight;
+
+      // While there is overflow, keep shrinking by 1px
+      // (Making sure we don't go below 1px)
+      while (
+        (workName.scrollWidth > containerWidth ||
+          workName.scrollHeight > containerHeight) &&
+        fontSize > 1
+      ) {
+        fontSize -= 1;
+        workName.style.fontSize = fontSize + "px";
+      }
+    });
+  }
+
+  // Call the function initially
+  let resizeTimeout;
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function () {
+      adjust_service_transition_font_size();
+      fitTextToContainer();
+    }, 100);
+  });
+
+  const isMobile = window.innerWidth < 768;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    adjust_service_transition_font_size();
+    fitTextToContainer();
+
+    // GSAP ScrollTrigger for h1
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Get the bounding rectangles of #c and #landing elements
+    var cElement = document.getElementById("c");
+    var landingElement = document.getElementById("landing");
+    var cRect = cElement.getBoundingClientRect();
+    var landingRect = landingElement.getBoundingClientRect();
+
+    // Calculate the center position of #c
+    var cCenterX = cRect.left + cRect.width * 0.2;
+    var cCenterY = cRect.top + cRect.height / 2;
+
+    // Calculate the relative center position of #c within #landing
+    var relativeX = ((cCenterX - landingRect.left) / landingRect.width) * 100;
+    var relativeY = ((cCenterY - landingRect.top) / landingRect.height) * 100;
+
+    // Set the transform-origin using the calculated position
+    // $('#landing').css('transform-origin', `${relativeX}% ${relativeY}%`);
+    gsap.set("#landing", {
+      transformOrigin: `${relativeX}% ${relativeY}%`,
+      force3D: true, // Force GPU rendering
+    });
+
+    // Enter into the C - Animation
+    gsap.to("#landing ", {
+      scale: 200,
+      rotation: -100,
+      backgroundColor: "black",
+      ease: "power2.in",
+      force3D: true,
+      scrollTrigger: {
+        trigger: "#landing",
+        start: "top top",
+        end: "center top",
+        scrub: 1,
+        pin: true,
+        pinSpacing: false,
+        onUpdate: (self) => {
+          const landing = document.getElementById("landing");
+          const spline = document.querySelector("spline-viewer");
+
+          // Hide spline during the zoom to avoid rendering 3D at extreme scales
+          if (spline) {
+            if (self.progress > 0.05) {
+              spline.style.visibility = "hidden";
+            } else {
+              // Only re-show when nearly back to normal scale
+              spline.style.visibility = "visible";
+            }
+          }
+        },
+        onLeave: () => {
+          // Fully zoomed in — hide the entire section to free GPU resources
+          const landing = document.getElementById("landing");
+          landing.style.visibility = "hidden";
+          landing.style.pointerEvents = "none";
+        },
+        onEnterBack: () => {
+          // Scrolling back up into the zoom — show section but keep spline hidden
+          // (onUpdate will re-show spline when progress drops below 0.05)
+          const landing = document.getElementById("landing");
+          landing.style.visibility = "visible";
+          landing.style.pointerEvents = "auto";
+          landing.style.display = "flex";
+        },
+        onLeaveBack: () => {
+          // Scrolled all the way back to top — fully visible, normal state
+          const landing = document.getElementById("landing");
+          landing.style.visibility = "visible";
+          landing.style.pointerEvents = "auto";
+          landing.style.display = "flex";
+          const spline = document.querySelector("spline-viewer");
+          if (spline) spline.style.visibility = "visible";
+        },
+        onEnter: () => {
+          const landing = document.getElementById("landing");
+          landing.style.display = "flex";
+          landing.style.visibility = "visible";
+        },
+      },
+    });
+
+    // Show the about us page
+    gsap.from(".about-us", {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".about-us",
+        start: "top 50%",
+        end: "top 10%",
+        scrub: 1,
+      },
+    });
+
+    // Pin Content
+    let content_timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".about-us",
+        start: "top top",
+        end: "bottom top",
+        scrub: 1,
+        pin: true,
+        // markers: true,
+        pinSpacing: false,
+        // toggleActions: "restart none none reverse",
+      },
+    });
+    // content_timeline.from('.story-1',{
+    //     // opacity: 0,
+    //     y: 500,
+    // },0)
+    // content_timeline.to('#blob',{
+    //     opacity: 0,
+    //     duration: 1,
+    // },0)
+
+    content_timeline.from(
+      ".story-1",
+      {
+        opacity: 0,
+        // x: -100,
+        duration: 1,
+      },
+      0
+    );
+
+    content_timeline.from(
+      ".content-one",
+      {
+        opacity: 0,
+        // x: 100,
+      },
+      1
+    );
+    content_timeline.from(
+      ".content-two",
+      {
+        opacity: 0,
+        // x: 100,
+      },
+      2
+    );
+    content_timeline.from(
+      ".content-three",
+      {
+        opacity: 0,
+        // x: 100,
+      },
+      3
+    );
+    content_timeline.to(
+      ".about-us",
+      {
+        opacity: 0,
+        // y: -20,
+      },
+      4
+    );
+
+    // Service Transition Text
+    let service_transition_timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".service-transition",
+        start: "top top",
+        end: () => `+=${window.innerHeight}`,
+        scrub: 1,
+        pin: true,
+        // markers: true,
+        pinSpacing: true,
+        // pinSpacing: false,
+      },
+    });
+    // service_transition_timeline.to('.about-us', {
+    //     opacity: 0,
+    // }, 0)
+
+    service_transition_timeline.from(".service-transition", {
+      opacity: 1,
+    });
+    service_transition_timeline.from(
+      ".service-transition .transition-text",
+      {
+        y: "-100%",
+        opacity: 0,
+        stagger: {
+          amount: 2,
+          from: "random",
+        },
+      },
+      0
+    );
+    service_transition_timeline.to(
+      ".service-transition .transition-text",
+      {
+        y: "-100%",
+        opacity: 0,
+        stagger: {
+          amount: 2,
+          from: "random",
+        },
+      },
+      "+=1"
+    );
+    document.addEventListener("DOMContentLoaded", () => {
+      let texts = document.querySelectorAll(
+        ".service-transition .transition-text"
+      );
+      texts.forEach((text, index) => {
+        text.style.zIndex = index - 1;
+      });
+    });
+
+    // Service
+    let service_timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".service",
+        start: "center center",
+        end: !isMobile ? "bottom top" : "+=2000",
+        scrub: 1,
+        pin: true,
+        // markers: true,
+        // pinSpacing: false,
+        onUpdate: (self) => {
+          let velocity = self.getVelocity() / -300; // Adjust skew based on velocity
+          let maxSkew = 10; // Maximum skew value
+          velocity = Math.max(Math.min(velocity, maxSkew), -maxSkew); // Clamp the skew value
+
+          gsap.to(".service-card", {
+            skewX: velocity,
+            // duration: 0.2,
+          });
+        },
+        onScrubComplete: () => {
+          gsap.to(".service-card", {
+            skewX: 0,
+            skewY: 0,
+          });
+        },
+        onLeave: () => {
+          gsap.to(".service-card", {
+            skewX: 0,
+            skewY: 0,
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(".service-card", {
+            skewX: 0,
+            skewY: 0,
+          });
+        },
+      },
+    });
+
+    let serviceCardContainer = document.querySelector(
+      ".service-card-container"
+    );
+    let serviceCards = document.querySelectorAll(".service-card");
+    let totalWidth =
+      serviceCards.length * 450 + (serviceCards.length - 1) * 20; // total_cards * (card width + gap) + (total_cards - 1) * 20
+    service_timeline.to(".service-card", {
+      x: !isMobile
+        ? `-${totalWidth - window.innerWidth + 2 * 6 * 16}px`
+        : `-${totalWidth - window.innerWidth * 3}px`, // total width minus viewport width and padding
+      ease: "none",
+    });
+
+    // // Combine the timelines to ensure sequential execution of the service transition and service timelines
+    // let master_timeline = gsap.timeline();
+    // master_timeline.add(service_transition_timeline);
+    // master_timeline.add(service_timeline, "+=1"); // Adds service_timeline immediately after service_transition_timeline
+
+    // Work section
+    let work_timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".work-container",
+        start: "top top",
+        // end: () => `+=${$(window).height() * 4}`,
+        end: () =>
+          isMobile
+            ? `+=${window.innerHeight * 2.5}`
+            : `s+=${window.innerHeight * 4}`,
+        scrub: true,
+        pin: true,
+      },
+    });
+    work_timeline.from(".work-item", {
+      y: "100%",
+      z: -100,
+      opacity: 0,
+      rotationX: -3,
+      stagger: 1,
+    });
+
+    // Modes of Working
+    if (!isMobile)
+      gsap.to(".work-model-title", {
+        scrollTrigger: {
+          trigger: ".work-model-title",
+          start: "bottom bottom",
+          endTrigger: ".work-model-container",
+          end: "bottom bottom",
+          pin: true,
+        },
+      });
+
+    // Contact Reveal
+
+    // Get the bounding rectangles of #c and #landing elements
+    var cElement = document.getElementById("contact-c");
+    var landingElement = document.getElementById("ending");
+    var cRect = cElement.getBoundingClientRect();
+    var landingRect = landingElement.getBoundingClientRect();
+
+    // Calculate the center position of #c
+    var cCenterX = cRect.left + cRect.width * 0.2;
+    var cCenterY = cRect.top + cRect.height / 2;
+
+    // Calculate the relative center position of #c within #landing
+    var relativeX = ((cCenterX - landingRect.left) / landingRect.width) * 100;
+    var relativeY = ((cCenterY - landingRect.top) / landingRect.height) * 100;
+
+    // Set the transform-origin using the calculated position
+    // $('#ending').css('transform-origin', `${relativeX}% ${relativeY}%`);
+    document.getElementById(
+      "ending"
+    ).style.transformOrigin = `${relativeX}% ${relativeY}%`;
+
+    // Dynamically increase the contact-container height
+    // $('.contact-container').height($('.contact-us-section').height());
+    var contactUsSectionHeight = document.querySelector(
+      ".contact-us-section"
+    ).offsetHeight;
+    document.querySelector(".contact-container").style.height =
+      contactUsSectionHeight + "px";
+
+    let contact_timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".contact-container",
+        start: !isMobile ? "top top" : "top top",
+        end: () => `+=${window.innerHeight}`,
+        scrub: true,
+        pin: true,
+        /*
+                  When the user enters this section, we mark the form as reached.
+                  If you prefer to mark "true" only after the animation finishes,
+                  you could move this logic to onComplete or a timeline event call.
+              */
+        onEnter: function () {
+          var ending_form = document.getElementById("ending-form");
+          if (ending_form) {
+            ending_form.setAttribute("data-ending-reached", "true");
+          }
+        },
+        /*
+                  If the user scrolls back up, we revert it back to false
+                  so that the scroll reminder can still appear.
+              */
+        onLeaveBack: function () {
+          var ending_form = document.getElementById("ending-form");
+          if (ending_form) {
+            ending_form.setAttribute("data-ending-reached", "false");
+          }
+        },
+      },
+    });
+    contact_timeline.to(
+      ".quote-container",
+      {
+        opacity: 0,
+        scale: 0.7,
+        duration: 1,
+      },
+      0
+    );
+    contact_timeline.from(
+      ".contact-us-section",
+      {
+        opacity: 0,
+        scale: 200,
+        rotation: -100,
+        backgroundColor: "black",
+      },
+      0.5
+    );
+    contact_timeline.to(
+      ".contact-us-section .title",
+      {
+        y: 0,
+        duration: 0.2,
+      },
+      1
+    );
+
+    // let margin_top_offset = Math.abs($('.contact-container').height() - $('.contact-container .contact-us-section').height());
+    // $('.global-cta-container').hide();
+    // $('footer').css('margin-top', `${margin_top_offset}px`);
+    let contactContainerHeight =
+      document.querySelector(".contact-container").offsetHeight;
+    let contactUsSectionHeight_2 = document.querySelector(
+      ".contact-container .contact-us-section"
+    ).offsetHeight;
+
+    let marginTopOffset = Math.abs(
+      contactContainerHeight - contactUsSectionHeight_2
+    );
+
+    document.querySelector(".global-cta-container").style.display = "none";
+    document.querySelector("footer").style.marginTop = `${marginTopOffset}px`;
+  });
+</script>
+
+<!-- Work 
+<script type="module">
+    import {
+        Scene,
+        PerspectiveCamera,
+        WebGLRenderer,
+        DirectionalLight,
+        Group,
+        Box3,
+        Vector3,
+        MeshBasicMaterial,
+    } from 'three';
+
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+    function initGLTF(canvas_id, canvas_model, initialDistance = 100, zoom = { _minZoom: 60, _maxZoom: 240, _zoomSpeed: 0.3 }) {
+
+        let canvas = document.getElementById(canvas_id);
+        let scene = new Scene();
+
+        // Detect mobile devices
+        let isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+        // Adjust camera field of view for mobile devices
+        let fov = isMobile ? 20 : 10;
+        let camera = new PerspectiveCamera(fov, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
+
+        // Set initial camera distance
+        camera.position.z = initialDistance;
+
+        // -----------------------------
+        // AUTO-ZOOM VARIABLES
+        // -----------------------------
+        let minZoom = zoom._minZoom;
+        let maxZoom = zoom._maxZoom;
+        let zoomSpeed = zoom._zoomSpeed;
+        let zoomDirection = -1; // Start by zooming out
+
+        // Optimize renderer settings for mobile (antialiasing off for wireframe mode)
+        let renderer = new WebGLRenderer({
+            canvas: canvas,
+            antialias: false, // Disable antialiasing entirely for better performance
+        });
+        renderer.setPixelRatio(isMobile ? Math.min(window.devicePixelRatio, 1.5) : window.devicePixelRatio);
+        renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+
+        // Disable shadows entirely
+        renderer.shadowMap.enabled = false;
+
+        // Lights with reduced intensity on mobile
+        // let lightIntensity = isMobile ? 1.5 : 3;
+        // let lights = [];
+        // lights[0] = new DirectionalLight(0xffffff, lightIntensity);
+        // lights[1] = new DirectionalLight(0xffffff, lightIntensity);
+        // lights[2] = new DirectionalLight(0xffffff, lightIntensity);
+
+        // lights[0].position.set(0, 200, 0);
+        // lights[1].position.set(100, 200, 100);
+        // lights[2].position.set(-100, -200, -100);
+
+        // scene.add(lights[0]);
+        // scene.add(lights[1]);
+        // scene.add(lights[2]);
+
+        let group = new Group();
+
+        let meshMaterial = new MeshBasicMaterial({
+            color: 0x00ff00, // Green color
+            wireframe: true, // Enables the wireframe
+            transparent: true, // Enables transparency
+            opacity: 0.1 // Sets the transparency level (50% transparent)
+        });
+
+        const loader = new GLTFLoader();
+        loader.load(canvas_model, function (gltf) {
+            gltf.scene.traverse(function (child) {
+                if (child.isMesh) {
+                    child.material = meshMaterial;
+                }
+            });
+
+            const boundingBox = new Box3().setFromObject(gltf.scene);
+            const center = new Vector3();
+            boundingBox.getCenter(center);
+            gltf.scene.position.sub(center);
+
+            group.add(gltf.scene);
+        });
+
+
+        scene.add(group);
+
+        function render() {
+            requestAnimationFrame(render);
+
+            // Reduce rotation speed for mobile devices
+            let rotationSpeed = isMobile ? 0.003 : 0.01;
+            group.rotation.y += rotationSpeed;
+
+            // ---------------------------------
+            // AUTO-ZOOM LOGIC
+            // ---------------------------------
+            // camera.position.z += zoomSpeed * zoomDirection;
+
+            // if (camera.position.z <= minZoom) {
+            //     camera.position.z = minZoom;
+            //     zoomDirection = 1; // Switch to zooming out
+            // }
+            // if (camera.position.z >= maxZoom) {
+            //     camera.position.z = maxZoom;
+            //     zoomDirection = -1; // Switch to zooming in
+            // }
+
+            renderer.render(scene, camera);
+        }
+
+        // Handle canvas resize events
+        function onWindowResize() {
+            camera.aspect = canvas.clientWidth / canvas.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+        }
+
+        window.addEventListener('resize', onWindowResize, false);
+
+        render();
+    }
+
+
+    if (!isMobile) {
+        initGLTF('work-1-model', "/static/web/3d/ship/scene.gltf", 500, { _minZoom: 60, _maxZoom: 240, _zoomSpeed: 0.3 });
+        initGLTF('work-2-model', "/static/web/3d/jeep/jeep.gltf", 60, { _minZoom: 30 * 0.6, _maxZoom: 60 * 0.6, _zoomSpeed: 0.1 });
+        // initGLTF('work-3-model', "/static/web/3d/flower/1.gltf", 300, {_minZoom: 20 * 0.2, _maxZoom: 50 * 0.2, _zoomSpeed: 0.1});
+        initGLTF('work-4-model', "/static/web/3d/construction/excavator.gltf", 30, { _minZoom: 20 * 0.3, _maxZoom: 90 * 0.3, _zoomSpeed: 0.1 });
+    }
+
+</script>
+-->
+
+<!-- About us Grid  -->
+<script>
+  // JavaScript to handle mouse movement
+  const aboutUsSection = document.querySelector(".about-us");
+  let animationFrameId;
+
+  // Add an event listener for the mousemove event
+  window.addEventListener("mousemove", (event) => {
+    if (animationFrameId) {
+      window.cancelAnimationFrame(animationFrameId);
+    }
+
+    animationFrameId = window.requestAnimationFrame(() => {
+      // Get the mouse x and y coordinates relative to the viewport
+      const mouseX = event.clientX;
+      const mouseY = event.clientY;
+
+      // Calculate percentage positions based on viewport size for smooth movement
+      const xPercent = (mouseX / window.innerWidth) * 100;
+      const yPercent = (mouseY / window.innerHeight) * 100;
+
+      aboutUsSection.style.backgroundImage = `
+              linear-gradient(rgba(255, 255, 255, 0.4) 0.05rem, transparent 0.05rem), 
+              linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0.05rem, transparent 0.05rem), 
+              radial-gradient(circle at ${xPercent}% ${yPercent}%, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0, 0.8) 20%)`;
+    });
+  });
+</script>
+
+<script type="module" src="static/web/js/index/three.bundle.min.html"></script>
+<script type="module">
+  // If you exported something like "init_all", you can do:
+  import { init_all } from "static/web/js/index/three.bundle.min.js";
+  document.addEventListener("DOMContentLoaded", () => {
+    init_all();
+  });
+</script>
+
+<!-- Record visited URLS inside cookie -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var current_path = window.location.pathname; // Get the current path
+
+    // Function to get a cookie by name
+    function getCookie(name) {
+      var match = document.cookie.match(
+        new RegExp("(^| )" + name + "=([^;]+)")
+      );
+      return match ? match[2] : undefined; // Do not decode, keep raw value
+    }
+
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+      var expires = "";
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + value + expires + "; path=/"; // Do not encode value
+    }
+
+    // Check if the 'url_visited' cookie exists
+    var url_visited = getCookie("url_visited");
+
+    if (!url_visited) {
+      // Set cookie value for the first time
+      setCookie("url_visited", current_path, 7); // Cookie expires in 7 days
+    } else {
+      // Get all the visited paths from the cookie and split them into an array
+      var path_array = url_visited.split("|");
+
+      // Check if the last path in the array is the same as the current path
+      if (path_array[path_array.length - 1] !== current_path) {
+        // Append the current path to the cookie if it's unique from the last entry
+        path_array.push(current_path);
+        setCookie("url_visited", path_array.join("|"), 7); // Update the cookie
+      }
+    }
+  });
+</script>
+
+<!-- Show and Hide header -->
+<script type="module">
+  document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(ScrollTrigger);
+
+    let show_anim = gsap
+      .from("header", {
+        yPercent: -100,
+        paused: true,
+        duration: 0.2,
+      })
+      .progress(1);
+
+    ScrollTrigger.create({
+      start: "top top",
+      end: "max",
+      onUpdate: (self) => {
+        self.direction === -1 ? show_anim.play() : show_anim.reverse();
+      },
+    });
+  });
+</script>
+
+<!-- Lenis -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  });
+</script>
+
+<!-- Hamburger -->
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const hamburger_close = document.getElementById("hamburger_close");
+  const menu = document.getElementById("menu");
+  const header = document.querySelector("header");
+  const body = document.body;
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    menu.classList.toggle("active");
+    header.classList.toggle("menu-open"); // Add class when menu is open
+    if (menu.classList.contains("active")) {
+      body.style.overflow = "hidden"; // Disable body scroll
+    } else {
+      body.style.overflow = ""; // Enable body scroll
+    }
+  });
+
+  hamburger_close.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    menu.classList.toggle("active");
+    header.classList.toggle("menu-open"); // Remove class when menu is closed
+    if (!menu.classList.contains("active")) {
+      body.style.overflow = ""; // Enable body scroll
+    }
+  });
+</script>
+
+<!-- Slick Slider -->
+<script>
+  $(document).ready(function () {
+    $(".slider").each(function (i, slider) {
+      $(slider).slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000 + Math.random() * 1000,
+        arrows: false,
+        dots: false,
+        focusOnSelect: true,
+        pauseOnHover: false,
+      });
+      // Set a random delay for the autoplay start
+      let randomStartDelay = Math.random() * 100;
+      setTimeout(() => {
+        $(slider).slick("slickPlay");
+      }, randomStartDelay);
+    });
+
+    $(".fade-slider").each(function (i, slider) {
+      $(slider).slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false,
+        dots: false,
+        focusOnSelect: true,
+        pauseOnHover: false,
+        fade: true,
+      });
+    });
+  });
+
+  // Preloader
+  window.addEventListener("load", () => {
+    const preloader = document.querySelector(".preloader");
+
+    // Minimum display time (1.5 seconds)
+    setTimeout(() => {
+      gsap.to(preloader, {
+        opacity: 0,
+        duration: 0.5,
+        onComplete: () => {
+          preloader.style.display = "none";
+        },
+      });
+    }, 1500);
+  });
+</script>
+
+<script>
+  // static/js/script.js
+  console.log("JavaScript file loaded!");
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("form-status-popup");
+    const popupMessage = document.getElementById("popup-message");
+    const closePopupButton = document.getElementById("close-popup");
+
+    // Check for status from Flask (set in render_template in app.py)
+    const params = new URLSearchParams(window.location.search); // Get URL parameters (if any - we are not using URL params in this case, but can be used if you reload the page differently)
+
+    // **IMPORTANT:** We are now checking for `status` and `message` in the rendered HTML directly using Jinja templating instead of URL parameters.
+    const status = "{{ status }}"; // Get status from Flask template
+    const message = "{{ message }}"; // Get message from Flask template
+
+    if (status === "success") {
+      popupMessage.textContent = message;
+      popup.classList.add("popup-success"); // Optional: Style for success
+      popup.style.display = "block";
+    } else if (status === "error") {
+      popupMessage.textContent = message;
+      popup.classList.add("popup-error"); // Optional: Style for error
+      popup.style.display = "block";
+    }
+
+    // Close popup when close button is clicked
+    closePopupButton.onclick = function () {
+      popup.style.display = "none";
+      // Optionally clear status and message from URL if you were using URL params
+      // (Not needed in this current implementation as we are using template variables)
+    };
+
+    // Close popup if user clicks outside the popup
+    window.onclick = function (event) {
+      if (event.target == popup) {
+        popup.style.display = "none";
+        // Optionally clear status and message from URL if you were using URL params
+        // (Not needed in this current implementation as we are using template variables)
+      }
+    };
+  });
+</script>
+
+<!-- Mirrored from www.digiking.com.ng/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Feb 2026 17:43:09 GMT -->
+
+</html>
